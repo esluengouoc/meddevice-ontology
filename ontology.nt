@@ -1,0 +1,493 @@
+<http://www.example.org/meddevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.example.org/meddevice> <http://purl.org/dc/terms/creator> "Eduardo Sánchez Luengo" .
+<http://www.example.org/meddevice> <http://purl.org/dc/terms/description> "Ontology for medical devices, manufacturers, incidents, risks and corrective actions under MDR (EU 2017/745) and IVDR (EU 2017/746)."@en .
+<http://www.example.org/meddevice> <http://purl.org/dc/terms/title> "MedDevice Ontology"@en .
+<http://www.example.org/meddevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology for medical devices, manufacturers, incidents, risks and corrective actions."@en .
+<http://www.example.org/meddevice> <http://www.w3.org/2000/01/rdf-schema#label> "MedDevice Ontology"@en .
+<http://www.example.org/meddevice> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/meddevice#affectsDevice
+<http://www.example.org/meddevice#affectsDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/meddevice#affectsDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#CorrectiveAction> .
+<http://www.example.org/meddevice#affectsDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#affectsDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a corrective action to the device it affects."@en .
+<http://www.example.org/meddevice#affectsDevice> <http://www.w3.org/2000/01/rdf-schema#label> "affects device"@en .
+# 
+# http://www.example.org/meddevice#hasFramework
+<http://www.example.org/meddevice#hasFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/meddevice#hasFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.example.org/meddevice#hasFramework> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#hasFramework> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/meddevice#RegulatoryFramework> .
+<http://www.example.org/meddevice#hasFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a device to its regulatory framework (functional)."@en .
+<http://www.example.org/meddevice#hasFramework> <http://www.w3.org/2000/01/rdf-schema#label> "has framework"@en .
+# 
+# http://www.example.org/meddevice#hasManufacturer
+<http://www.example.org/meddevice#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/meddevice#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.example.org/meddevice#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/meddevice#Manufacturer> .
+<http://www.example.org/meddevice#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a device to its manufacturer (functional)."@en .
+<http://www.example.org/meddevice#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "has manufacturer"@en .
+# 
+# http://www.example.org/meddevice#involvesDevice
+<http://www.example.org/meddevice#involvesDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/meddevice#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#Incident> .
+<http://www.example.org/meddevice#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an incident to the device involved."@en .
+<http://www.example.org/meddevice#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#label> "involves device"@en .
+# 
+# http://www.example.org/meddevice#reportedBy
+<http://www.example.org/meddevice#reportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/meddevice#reportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#Incident> .
+<http://www.example.org/meddevice#reportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/meddevice#Manufacturer> .
+<http://www.example.org/meddevice#reportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an incident to the manufacturer that reported it."@en .
+<http://www.example.org/meddevice#reportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reported by"@en .
+# 
+# http://www.example.org/meddevice#triggeredBy
+<http://www.example.org/meddevice#triggeredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/meddevice#triggeredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.example.org/meddevice#triggeredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#CorrectiveAction> .
+<http://www.example.org/meddevice#triggeredBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/meddevice#Incident> .
+<http://www.example.org/meddevice#triggeredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a corrective action to the incident that triggered it (functional)."@en .
+<http://www.example.org/meddevice#triggeredBy> <http://www.w3.org/2000/01/rdf-schema#label> "triggered by"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/meddevice#actionDate
+<http://www.example.org/meddevice#actionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/meddevice#actionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#CorrectiveAction> .
+<http://www.example.org/meddevice#actionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.example.org/meddevice#actionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date the corrective action was initiated."@en .
+<http://www.example.org/meddevice#actionDate> <http://www.w3.org/2000/01/rdf-schema#label> "action date"@en .
+# 
+# http://www.example.org/meddevice#deviceId
+<http://www.example.org/meddevice#deviceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/meddevice#deviceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.example.org/meddevice#deviceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#deviceId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/meddevice#deviceId> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of a device (functional)."@en .
+<http://www.example.org/meddevice#deviceId> <http://www.w3.org/2000/01/rdf-schema#label> "device ID"@en .
+# 
+# http://www.example.org/meddevice#deviceName
+<http://www.example.org/meddevice#deviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/meddevice#deviceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#deviceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/meddevice#deviceName> <http://www.w3.org/2000/01/rdf-schema#comment> "Commercial name of a device."@en .
+<http://www.example.org/meddevice#deviceName> <http://www.w3.org/2000/01/rdf-schema#label> "device name"@en .
+# 
+# http://www.example.org/meddevice#incidentId
+<http://www.example.org/meddevice#incidentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/meddevice#incidentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.example.org/meddevice#incidentId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#Incident> .
+<http://www.example.org/meddevice#incidentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/meddevice#incidentId> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of an incident (functional)."@en .
+<http://www.example.org/meddevice#incidentId> <http://www.w3.org/2000/01/rdf-schema#label> "incident ID"@en .
+# 
+# http://www.example.org/meddevice#isActive
+<http://www.example.org/meddevice#isActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/meddevice#isActive> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#isActive> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.example.org/meddevice#isActive> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the device is active."@en .
+<http://www.example.org/meddevice#isActive> <http://www.w3.org/2000/01/rdf-schema#label> "is active"@en .
+# 
+# http://www.example.org/meddevice#isImplantable
+<http://www.example.org/meddevice#isImplantable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/meddevice#isImplantable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#isImplantable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.example.org/meddevice#isImplantable> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the device is implantable."@en .
+<http://www.example.org/meddevice#isImplantable> <http://www.w3.org/2000/01/rdf-schema#label> "is implantable"@en .
+# 
+# http://www.example.org/meddevice#reportDate
+<http://www.example.org/meddevice#reportDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/meddevice#reportDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/meddevice#Incident> .
+<http://www.example.org/meddevice#reportDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.example.org/meddevice#reportDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date the incident was reported."@en .
+<http://www.example.org/meddevice#reportDate> <http://www.w3.org/2000/01/rdf-schema#label> "report date"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/meddevice#ActiveDevice
+<http://www.example.org/meddevice#ActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Device requiring an external energy source."@en .
+<http://www.example.org/meddevice#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Active Device"@en .
+# 
+# http://www.example.org/meddevice#CorrectiveAction
+<http://www.example.org/meddevice#CorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Entity> .
+<http://www.example.org/meddevice#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.example.org/meddevice#triggeredBy> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.example.org/meddevice#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Action taken after an incident to prevent recurrence."@en .
+<http://www.example.org/meddevice#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "Corrective Action"@en .
+# 
+# http://www.example.org/meddevice#Country
+<http://www.example.org/meddevice#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Entity> .
+<http://www.example.org/meddevice#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "Country where a manufacturer is registered."@en .
+<http://www.example.org/meddevice#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+# 
+# http://www.example.org/meddevice#DiagnosticRisk
+<http://www.example.org/meddevice#DiagnosticRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#DiagnosticRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Risk> .
+<http://www.example.org/meddevice#DiagnosticRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk related to incorrect diagnostic results."@en .
+<http://www.example.org/meddevice#DiagnosticRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Diagnostic Risk"@en .
+# 
+# http://www.example.org/meddevice#Entity
+<http://www.example.org/meddevice#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#Entity> <http://www.w3.org/2000/01/rdf-schema#comment> "Root class of the ontology."@en .
+<http://www.example.org/meddevice#Entity> <http://www.w3.org/2000/01/rdf-schema#label> "Entity"@en .
+# 
+# http://www.example.org/meddevice#IVDRFramework
+<http://www.example.org/meddevice#IVDRFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#IVDRFramework> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#RegulatoryFramework> .
+<http://www.example.org/meddevice#IVDRFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "In Vitro Diagnostic Regulation (EU 2017/746)."@en .
+<http://www.example.org/meddevice#IVDRFramework> <http://www.w3.org/2000/01/rdf-schema#label> "IVDR Framework"@en .
+# 
+# http://www.example.org/meddevice#ImplantableActiveDevice
+<http://www.example.org/meddevice#ImplantableActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#ActiveDevice> .
+<http://www.example.org/meddevice#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#ImplantableDevice> .
+<http://www.example.org/meddevice#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Device that is both implantable and active."@en .
+<http://www.example.org/meddevice#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Implantable Active Device"@en .
+# 
+# http://www.example.org/meddevice#ImplantableDevice
+<http://www.example.org/meddevice#ImplantableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Device intended to remain in the human body after a procedure."@en .
+<http://www.example.org/meddevice#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Implantable Device"@en .
+# 
+# http://www.example.org/meddevice#InVitroDiagnosticDevice
+<http://www.example.org/meddevice#InVitroDiagnosticDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Device used to examine specimens from the human body."@en .
+<http://www.example.org/meddevice#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#label> "IVD Device"@en .
+# 
+# http://www.example.org/meddevice#Incident
+<http://www.example.org/meddevice#Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Entity> .
+<http://www.example.org/meddevice#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.example.org/meddevice#involvesDevice> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.example.org/meddevice#Incident> <http://www.w3.org/2000/01/rdf-schema#comment> "Event involving a device that may have caused or could cause harm."@en .
+<http://www.example.org/meddevice#Incident> <http://www.w3.org/2000/01/rdf-schema#label> "Incident"@en .
+# 
+# http://www.example.org/meddevice#InjuryRisk
+<http://www.example.org/meddevice#InjuryRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Risk> .
+<http://www.example.org/meddevice#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk involving physical injury to a patient or user."@en .
+<http://www.example.org/meddevice#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Injury Risk"@en .
+# 
+# http://www.example.org/meddevice#MDRFramework
+<http://www.example.org/meddevice#MDRFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#MDRFramework> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#RegulatoryFramework> .
+<http://www.example.org/meddevice#MDRFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "Medical Device Regulation (EU 2017/745)."@en .
+<http://www.example.org/meddevice#MDRFramework> <http://www.w3.org/2000/01/rdf-schema#label> "MDR Framework"@en .
+# 
+# http://www.example.org/meddevice#Manufacturer
+<http://www.example.org/meddevice#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Entity> .
+<http://www.example.org/meddevice#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Company that produces and places a device on the market."@en .
+<http://www.example.org/meddevice#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer"@en .
+# 
+# http://www.example.org/meddevice#MedicalDevice
+<http://www.example.org/meddevice#MedicalDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Entity> .
+<http://www.example.org/meddevice#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.example.org/meddevice#hasManufacturer> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.example.org/meddevice#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device intended for medical use."@en .
+<http://www.example.org/meddevice#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Device"@en .
+# 
+# http://www.example.org/meddevice#NearMissIncident
+<http://www.example.org/meddevice#NearMissIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#NearMissIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Incident> .
+<http://www.example.org/meddevice#NearMissIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident that could have caused harm but did not."@en .
+<http://www.example.org/meddevice#NearMissIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Near-Miss Incident"@en .
+# 
+# http://www.example.org/meddevice#Recall
+<http://www.example.org/meddevice#Recall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#Recall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#CorrectiveAction> .
+<http://www.example.org/meddevice#Recall> <http://www.w3.org/2000/01/rdf-schema#comment> "Corrective action that removes or replaces affected devices."@en .
+<http://www.example.org/meddevice#Recall> <http://www.w3.org/2000/01/rdf-schema#label> "Recall"@en .
+# 
+# http://www.example.org/meddevice#RegulatoryFramework
+<http://www.example.org/meddevice#RegulatoryFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#RegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Entity> .
+<http://www.example.org/meddevice#RegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "European regulatory framework applicable to a medical device."@en .
+<http://www.example.org/meddevice#RegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#label> "Regulatory Framework"@en .
+# 
+# http://www.example.org/meddevice#Risk
+<http://www.example.org/meddevice#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Entity> .
+<http://www.example.org/meddevice#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "Potential harm associated with a device."@en .
+<http://www.example.org/meddevice#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk"@en .
+# 
+# http://www.example.org/meddevice#RiskClass
+<http://www.example.org/meddevice#RiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#RiskClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Entity> .
+<http://www.example.org/meddevice#RiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Regulatory risk classification assigned to a device."@en .
+<http://www.example.org/meddevice#RiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Class"@en .
+# 
+# http://www.example.org/meddevice#SafetyAlert
+<http://www.example.org/meddevice#SafetyAlert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#SafetyAlert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#CorrectiveAction> .
+<http://www.example.org/meddevice#SafetyAlert> <http://www.w3.org/2000/01/rdf-schema#comment> "Formal safety communication issued by the manufacturer."@en .
+<http://www.example.org/meddevice#SafetyAlert> <http://www.w3.org/2000/01/rdf-schema#label> "Safety Alert"@en .
+# 
+# http://www.example.org/meddevice#SeriousIncident
+<http://www.example.org/meddevice#SeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/meddevice#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/meddevice#Incident> .
+<http://www.example.org/meddevice#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident that led or might have led to serious harm or death."@en .
+<http://www.example.org/meddevice#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Serious Incident"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/resource/Germany
+<http://dbpedia.org/resource/Germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Germany> <http://www.w3.org/2002/07/owl#sameAs> <http://www.example.org/meddevice#Germany> .
+# 
+# http://www.example.org/meddevice#Germany
+# 
+# http://dbpedia.org/resource/Medtronic
+<http://dbpedia.org/resource/Medtronic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Medtronic> <http://www.w3.org/2002/07/owl#sameAs> <http://www.example.org/meddevice#MAN_001> .
+# 
+# http://www.example.org/meddevice#MAN_001
+# 
+# http://dbpedia.org/resource/Republic_of_Ireland
+<http://dbpedia.org/resource/Republic_of_Ireland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Republic_of_Ireland> <http://www.w3.org/2002/07/owl#sameAs> <http://www.example.org/meddevice#Ireland> .
+# 
+# http://www.example.org/meddevice#Ireland
+# 
+# http://www.example.org/meddevice#ACT_001
+<http://www.example.org/meddevice#ACT_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/meddevice#ACT_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/meddevice#SafetyAlert> .
+<http://www.example.org/meddevice#ACT_001> <http://www.example.org/meddevice#triggeredBy> <http://www.example.org/meddevice#INC_001> .
+<http://www.example.org/meddevice#ACT_001> <http://www.example.org/meddevice#actionDate> "2024-02-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.example.org/meddevice#ACT_001> <http://www.w3.org/2000/01/rdf-schema#comment> "Safety alert triggered by INC_001."@en .
+<http://www.example.org/meddevice#ACT_001> <http://www.w3.org/2000/01/rdf-schema#label> "Safety Alert 1"@en .
+# 
+# http://www.example.org/meddevice#ClassIII
+<http://www.example.org/meddevice#ClassIII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/meddevice#ClassIII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/meddevice#RiskClass> .
+<http://www.example.org/meddevice#ClassIII> <http://www.w3.org/2000/01/rdf-schema#comment> "Highest risk class for medical devices under MDR."@en .
+<http://www.example.org/meddevice#ClassIII> <http://www.w3.org/2000/01/rdf-schema#label> "Class III"@en .
+# 
+# http://www.example.org/meddevice#DEV_001
+<http://www.example.org/meddevice#DEV_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/meddevice#DEV_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/meddevice#MedicalDevice> .
+<http://www.example.org/meddevice#DEV_001> <http://www.example.org/meddevice#hasFramework> <http://www.example.org/meddevice#MDR> .
+<http://www.example.org/meddevice#DEV_001> <http://www.example.org/meddevice#hasManufacturer> <http://www.example.org/meddevice#MAN_001> .
+<http://www.example.org/meddevice#DEV_001> <http://www.example.org/meddevice#deviceId> "DEV-001" .
+<http://www.example.org/meddevice#DEV_001> <http://www.example.org/meddevice#deviceName> "HeartMate 3" .
+<http://www.example.org/meddevice#DEV_001> <http://www.example.org/meddevice#isActive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.example.org/meddevice#DEV_001> <http://www.example.org/meddevice#isImplantable> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.example.org/meddevice#DEV_001> <http://www.w3.org/2000/01/rdf-schema#comment> "Implantable active ventricular assist device."@en .
+<http://www.example.org/meddevice#DEV_001> <http://www.w3.org/2000/01/rdf-schema#label> "HeartMate 3"@en .
+# 
+# http://www.example.org/meddevice#Germany
+<http://www.example.org/meddevice#Germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/meddevice#Germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/meddevice#Country> .
+<http://www.example.org/meddevice#Germany> <http://www.w3.org/2000/01/rdf-schema#comment> "Country of registration for Roche Diagnostics GmbH."@en .
+<http://www.example.org/meddevice#Germany> <http://www.w3.org/2000/01/rdf-schema#label> "Germany"@en .
+# 
+# http://www.example.org/meddevice#INC_001
+<http://www.example.org/meddevice#INC_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/meddevice#INC_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/meddevice#SeriousIncident> .
+<http://www.example.org/meddevice#INC_001> <http://www.example.org/meddevice#involvesDevice> <http://www.example.org/meddevice#DEV_001> .
+<http://www.example.org/meddevice#INC_001> <http://www.example.org/meddevice#incidentId> "INC-001" .
+<http://www.example.org/meddevice#INC_001> <http://www.example.org/meddevice#reportDate> "2024-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.example.org/meddevice#INC_001> <http://www.w3.org/2000/01/rdf-schema#comment> "Serious incident involving DEV_001."@en .
+<http://www.example.org/meddevice#INC_001> <http://www.w3.org/2000/01/rdf-schema#label> "Incident 1"@en .
+# 
+# http://www.example.org/meddevice#IVDR
+<http://www.example.org/meddevice#IVDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/meddevice#IVDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/meddevice#IVDRFramework> .
+<http://www.example.org/meddevice#IVDR> <http://www.w3.org/2000/01/rdf-schema#comment> "In Vitro Diagnostic Regulation (EU 2017/746)."@en .
+<http://www.example.org/meddevice#IVDR> <http://www.w3.org/2000/01/rdf-schema#label> "IVDR"@en .
+# 
+# http://www.example.org/meddevice#Ireland
+<http://www.example.org/meddevice#Ireland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/meddevice#Ireland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/meddevice#Country> .
+<http://www.example.org/meddevice#Ireland> <http://www.w3.org/2000/01/rdf-schema#comment> "Country of registration for Medtronic plc."@en .
+<http://www.example.org/meddevice#Ireland> <http://www.w3.org/2000/01/rdf-schema#label> "Ireland"@en .
+# 
+# http://www.example.org/meddevice#MAN_001
+<http://www.example.org/meddevice#MAN_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/meddevice#MAN_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/meddevice#Manufacturer> .
+<http://www.example.org/meddevice#MAN_001> <http://www.w3.org/2000/01/rdf-schema#comment> "Medtronic plc, manufacturer registered in Ireland."@en .
+<http://www.example.org/meddevice#MAN_001> <http://www.w3.org/2000/01/rdf-schema#label> "Medtronic"@en .
+# 
+# http://www.example.org/meddevice#MDR
+<http://www.example.org/meddevice#MDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.org/meddevice#MDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/meddevice#MDRFramework> .
+<http://www.example.org/meddevice#MDR> <http://www.w3.org/2000/01/rdf-schema#comment> "Medical Device Regulation (EU 2017/745)."@en .
+<http://www.example.org/meddevice#MDR> <http://www.w3.org/2000/01/rdf-schema#label> "MDR"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://www.example.org/meddevice#dev> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.example.org/meddevice#act> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.example.org/meddevice#inc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.example.org/meddevice#man> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid13 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#comment> "Infers the device affected by a corrective action."@en .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 2"@en .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid13 <http://www.w3.org/2003/11/swrl#body> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument2> <http://www.example.org/meddevice#dev> .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument1> <http://www.example.org/meddevice#inc> .
+_:genid15 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.example.org/meddevice#involvesDevice> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument2> <http://www.example.org/meddevice#inc> .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument1> <http://www.example.org/meddevice#act> .
+_:genid17 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.example.org/meddevice#triggeredBy> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid13 <http://www.w3.org/2003/11/swrl#head> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2003/11/swrl#argument2> <http://www.example.org/meddevice#dev> .
+_:genid19 <http://www.w3.org/2003/11/swrl#argument1> <http://www.example.org/meddevice#act> .
+_:genid19 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.example.org/meddevice#affectsDevice> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid20 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#comment> "Infers the manufacturer reporting an incident."@en .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 1"@en .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid20 <http://www.w3.org/2003/11/swrl#body> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument2> <http://www.example.org/meddevice#man> .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument1> <http://www.example.org/meddevice#dev> .
+_:genid22 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.example.org/meddevice#hasManufacturer> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument2> <http://www.example.org/meddevice#dev> .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <http://www.example.org/meddevice#inc> .
+_:genid24 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.example.org/meddevice#involvesDevice> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid20 <http://www.w3.org/2003/11/swrl#head> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument2> <http://www.example.org/meddevice#man> .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <http://www.example.org/meddevice#inc> .
+_:genid26 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.example.org/meddevice#reportedBy> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid4 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid4 <http://www.w3.org/2000/01/rdf-schema#comment> "Infers ImplantableActiveDevice when isImplantable and isActive are both true."@en .
+_:genid4 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 3"@en .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid4 <http://www.w3.org/2003/11/swrl#body> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/2003/11/swrl#argument2> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid6 <http://www.w3.org/2003/11/swrl#argument1> <http://www.example.org/meddevice#dev> .
+_:genid6 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.example.org/meddevice#isActive> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2003/11/swrl#argument2> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid8 <http://www.w3.org/2003/11/swrl#argument1> <http://www.example.org/meddevice#dev> .
+_:genid8 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.example.org/meddevice#isImplantable> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2003/11/swrl#argument1> <http://www.example.org/meddevice#dev> .
+_:genid10 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/meddevice#MedicalDevice> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid4 <http://www.w3.org/2003/11/swrl#head> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/2003/11/swrl#argument1> <http://www.example.org/meddevice#dev> .
+_:genid12 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/meddevice#ImplantableActiveDevice> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
